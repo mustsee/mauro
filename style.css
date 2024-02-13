@@ -1,0 +1,141 @@
+:root {
+  --text: #333;
+  --light-text: #666;
+}
+
+/* REUSABLE */
+
+#m-title {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+  font-size: 20px;
+  /* If font-size is changed, the height of #m-nav should also change */
+}
+
+#m-title span {
+  font-size: 0.8rem;
+}
+
+#m-nav, #m-section, #m-section-series {
+  padding-top: 0.5rem;
+}
+
+#m-nav {
+  top: 0;
+  height: calc(100vh - 54px);
+}
+
+#m-nav ul {
+  padding-left: 0;
+}
+
+#m-nav li {
+  list-style: none;
+}
+
+#m-nav .nav-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.25rem 1rem;
+  cursor: default;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+#m-nav img {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  padding: 2px; /* Needed ? */
+  /* border: 1px solid black; */
+}
+
+#m-nav .nav-sub-list {
+  margin-bottom: 1rem;
+}
+
+#m-nav .nav-sub-item {
+  padding: 0rem 1rem 0rem calc(28px + 24px);
+  font-size: 0.9rem;
+  color: var(--light-text);
+}
+
+.active {
+  text-decoration: underline;
+}
+
+/* HOME PAGE */
+
+#m-section .m-row {
+  display: flex;
+  /* justify-content: center; */
+}
+
+#m-section img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  transition: transform .1s;
+}
+
+#m-section img:hover{
+  transform: scale(1.1);
+}
+
+#m-section .img-zoom{
+  overflow: hidden;
+}
+
+/* SERIES */
+
+#m-section-series .m-row {
+  display: flex;
+  /* justify-content: center; */
+}
+
+#m-section-series img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  border: 1px solid #CCC;
+  background-color: #F1F1F1;
+  margin: 0 1rem 1rem 0;
+}
+
+/* ARTWORK */
+
+#m-section-artwork .m-row {
+  display: flex;
+  align-items: end;
+}
+
+#m-section-artwork img {
+  width: auto;
+  height: 600px;
+  object-fit: contain;
+}
+
+#m-section-artwork .content {
+  padding-left: 15px;
+  color: var(--text);
+}
+
+#m-section-artwork .content .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
+
+#m-section-artwork .content .date, .materials, .measurements {
+  font-size: 0.9rem;
+  color: var(--light-text);
+}
